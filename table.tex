@@ -1,0 +1,25 @@
+\section{Table}
+An example of a floating table. Note that, for IEEE style tables, the 
+\verb|\caption| command should come BEFORE the table. Table text will default to
+\verb|\footnotesize| as IEEE normally uses this smaller font for tables.
+The \verb|\label| must come after \verb|\caption| as always.
+
+\begin{table}
+\caption{\textbf{\label{tab:1} An Example of a Table}}
+\begin{tabular}{cc}
+\hline
+One & Two\\
+\hline
+Three & Four\\
+\hline
+\end{tabular}
+\end{table}
+
+
+Note that IEEE does not put floats in the very first column - or typically
+anywhere on the first page for that matter. Also, in-text middle ("here")
+positioning is not used. Most IEEE journals/conferences use top floats
+exclusively. Note that, LaTeX2e, unlike IEEE journals/conferences, places
+footnotes above bottom floats. This can be corrected via the \verb|\fnbelowfloat|
+command of the stfloats package.
+
