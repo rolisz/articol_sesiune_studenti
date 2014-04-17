@@ -1,6 +1,6 @@
 abstract.tex
 introduction.tex
 figures.tex
-table.tex
+related.tex
 conclusions.tex
 Acknowledgment.tex
