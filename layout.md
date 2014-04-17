@@ -4,3 +4,4 @@ problem_statement.tex
 related.tex
 methodology.tex
 experiments.tex
+discussion.tex
