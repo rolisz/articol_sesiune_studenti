@@ -6,10 +6,25 @@ The bounding boxes of the characters were extracted from the images. The resulti
 
 For the character segmentation problem, positive and negative patches were extracted from the images, each containing 40 columns of pixels. The positive example were obtained by taking the leftmost and rightmost columns of the bounding boxes of characters, together with 19 previous columns and 20 columns that followed. The negative examples were obtained by sampling randomly from the middle of a character and taking 19 columns from before and 20 from after.
 
+For the character recognition problem, the labels corresponding to each character were converted to a vector of 74 dimensions, with each dimension corresponding to one possible character value. The value of the dimension corresponding to the character of a data point was set to 1, while all the others were set to 0. 
+
+For the character segmentation problem, the labels were binary: 1 if a certain data point was were a segmentation should occur, 0 otherwise. 
+
 \subsection{Training and testing}
 The data set was shuffled and then split into two parts, one for training and one for testing. The splitting was done in a random way, because the data points are independent and order does not matter. The training set contained 80\% of the data and the test set contained the remaining 20\%. 
 
-For the character recognition problem, the labels corresponding to each character were converted to a 
+All experiments were run multiple types, with the dataset being shuffled each time. In the case of the Random Forests, the multiple runs of the experiments are necessary because the splitting points for the trees and the dataset splits are chosen randomly across runs. 
+\subsection{Experiments}
 
-\subsection{Results}
+For both tasks, the parameters for the algorithms were selected using cross-validation. In the case of the SVM, the search space was on logarithmic scale from 10^-2 to 10^4 for the regularization parameter. In the case of the random forest, the number of trees used ranged from 50 to 300 in steps of 50, the maximum depth of each tree varied from 10 to 100, in steps of 50, and the measure of the quality of the split was either the Gini impurity measure or the information gain. 
+
+Table X contains the average, maximum and minimum values obtained for the accuracy of the character recognition problem.
+
+
+Table Y contains the average, maximum and minimum values obtained for the accuracy of the character segmentation problem.
+
+Table Z contains the confusion matrix for the best experiment on the character recognition problem.
+
+Table W contains the confusion matrix for the best experiment on the character segmentation problem.
+
 
