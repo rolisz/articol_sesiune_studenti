@@ -20,6 +20,24 @@ For both tasks, the parameters for the algorithms were selected using cross-vali
 
 Table X contains the average, maximum and minimum values obtained for the accuracy of the character recognition problem.
 
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[h]
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{@{}lllll@{}}
+\toprule
+Regularization & Min     & Max     & Mean    & Std. dev. \\ \midrule
+0.01           & 0.73577 & 0.75101 & 0.74314 & 0.00509   \\
+0.1            & 0.88934 & 0.90244 & 0.89575 & 0.00530   \\
+1              & 0.90142 & 0.92480 & 0.91546 & 0.00818   \\
+10             & 0.90244 & 0.92386 & 0.91404 & 0.00753   \\
+100            & 0.90142 & 0.92284 & 0.91323 & 0.00839   \\
+1000           & 0.90041 & 0.92378 & 0.91242 & 0.00930   \\
+10000          & 0.90041 &         & 0.91181 & 0.00967   \\ \bottomrule
+\end{tabular}
+\end{table}
+
 Table Y contains the average, maximum and minimum values obtained for the accuracy of the character segmentation problem.
 
 Table Z contains the confusion matrix for the best experiment on the character recognition problem.
