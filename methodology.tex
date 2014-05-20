@@ -9,13 +9,15 @@ Random forests have been introduced by Leo Breiman and Adele Cutler\cite{breiman
 
 When training the random forest, for each tree, n samples are taken with replacement from the training data (a bootstrap sample) and the tree is trained on these, using a slightly modified procedure. When splitting in a node, instead of choosing the best split across all features, as is done in the classical decision tree approach, here the best split is chosen from a random subset of the m features. This is done to avoid correlations between trees: otherwise good features would always get picked in all trees, so they would be correlated. As m is smaller, the correlation between the trees is smaller, but the strength of each tree (how well it can predict on its own) also goes down, so a balance must be found these extremes. 
 
-Random forests are a popular algorithm in many machine learning competitions, because they are fast, they don't have many parameters to tune, yet still produce good predictions. Among their weaknesess is the fact they can easily overfit a noisy dataset. 
+Random forests are a popular algorithm in many machine learning competitions, because they are fast, they don't have many parameters to tune, yet still produce good predictions. Among their weaknesess is the fact that they can easily overfit a noisy dataset. 
 
 \subsubsection{Linear SVM}
 
 Support vector machines\cite{Cortes_1995} are discriminative classifiers formally defined by high-dimensional hyperplanes, which are used to distinguish between the classes to which data points belong. The hyperplane defined by an SVM maximizes the margin to the data points used in training, hoping that this leads to a better generalization of the classifier. 
 
-SVM can be used to project the original data to a much higher dimensional space (in some cases even infinte-dimensional space), so that they are linearly separable in that space. 
+SVM can be used to project the original data to a much higher dimensional space (in some cases even infinte-dimensional space), so that they are linearly separable in that space. The mapping to a higher dimensional space is done using a kernel function. 
+
+Because sometimes there is noise in the data, so it may not be possible to separate the data linearly, not even in a high dimensional space or, even if possible, this may not be desirable, because it would overfit to the data and not generalize well. In such cases, it is prefered to have a decision surfaces that makes some mistakes on the training data, but generalizes better and represents the noisy data more accurately. SVMs can be used as soft margin classifiers, allowing examples to be classified wrongly at training time, but penalizing them according to their distance to the other side of the hyperplane. \cite{russell1995artificial}
 
 Because SVMs separate only two classes, when there are multiple classes to be distinguished, the "one-vs-all" approach can be used for classficiation, and is as accurate as any other approach for this problem\cite{rifkin2004defense}. In this case, one classifier is trained for each class, to distinguish it from all other classes. To make a prediction, all classifiers predict their value and the one that is used will be the one with the highest confidence score.
 
