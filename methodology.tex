@@ -12,6 +12,7 @@ Support vector machines\cite{Cortes_1995} are discriminative classifiers formall
 
 SVM can be used to project the original data to a much higher dimensional space (in some cases even infinte-dimensional space), so that they are linearly separable in that space. 
 
+Because SVMs separate only two classes, when there are multiple classes to be distinguished, the "one-vs-all" approach can be used for classficiation, and is as accurate as any other approach for this problem\cite{rifkin2004defense}. In this case, one classifier is trained for each class, to distinguish it from all other classes. To make a prediction, all classifiers predict their value and the one that is used will be the one with the highest confidence score.
 
 \subsection{Model design}
 
