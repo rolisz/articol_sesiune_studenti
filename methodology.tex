@@ -23,5 +23,12 @@ Because SVMs separate only two classes, when there are multiple classes to be di
 
 \subsection{Model design}
 
+\subsubsection{The random forest model}
+The random forest was used as a model for the character segmentation problem. The criterion for choosing the best feature to split a node is the information gain (entropy). Trees are grown to their full depth, no pruning or limitation is applied to the branches. 
 
+The other parameters of the random forest were chosen by cross-validation: the number of trees and the number of features to consider when randomly sampling from the feature space. 
 
+\subsubsection{The support vector machine model}
+The SVM was used for the character recognition problem. A linear kernel was used, so there was no projecting of data into a higher dimensional space. 
+
+The regularization parameter of the linear SVM was determined using cross-validation. 
