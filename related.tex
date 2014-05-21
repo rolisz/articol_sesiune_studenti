@@ -24,6 +24,11 @@ Convolutional neural network & 0.95            \\ \hline
 \end{table}
 
 Many improvements have been published on the MNIST dataset. Some of the more recent ones include L. Deng and D. Yu\cite{deng2011deep}, obtaining an error rate of 0.83, using a deep convex neural net with unsupervised pre-training. The best result obtained without using committees is D. Ciresan's deep neural network, trained on GPU devices\cite{Cire_an_2010}, that obtained 0.35\% error rate. The current state of the art was obtained by the same group, using a committee of 35 convolutional neural networks, with an error rate of 0.23\%, which beats human performance\cite{2012arXiv1202.2745C}. 
-OCR 
 
-To our knowledge, there are no existing approaches for receipts.
+For the character segmentation problem, one approach proposed by S. Lee and D. Lee\cite{Dong_June_Lee} was based on vertical projections of the images. The projections were obtained by counting how many black pixels were in a column and then various criteria were used to determine which columns were candidates for segmentation, based on some threshold values. They obtained results ranging from 85\% to 98\% accuracy, depending on font and alphabet that was used. 
+
+F. Kahraman and B. Kurt used a nonlinear vector quantization to perform the character segmentation\cite{kahraman2003license} with an accuracy of 94.5\% on a set of 2198 license plate characters. 
+
+F. Vojtěch and H. Václav presented an approach using Hidden Markov Chains to model the problem of character segmentation in license plates. Without incorporating prior knowledge about the license plate, they get 37\% incorrect segmentations, but by using that knowledge, they managed to get it down to 3.3\%\cite{Franc_2005}.
+
+B. Janssen and E. Saund have worked on a system called Receipts2Go\cite{janssen2012receipts2go} for extracting information from small documents, including receipts. They presented two improvements to the image normalization process, but for the actual OCR part they used off-the-shelf commercial software. 
