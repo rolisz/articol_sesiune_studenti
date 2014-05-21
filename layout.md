@@ -5,5 +5,6 @@ related.tex
 methodology.tex
 experiments.tex
 figures/bon1/bon1.jpg
+figures/1/1.jpg
 discussion.tex
 conclusion.tex
