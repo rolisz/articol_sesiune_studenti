@@ -11,7 +11,7 @@ When training the random forest, for each tree, n samples are taken with replace
 
 Random forests are a popular algorithm in many machine learning competitions, because they are fast, they don't have many parameters to tune, yet still produce good predictions. Among their weaknesess is the fact that they can easily overfit a noisy dataset. 
 
-\subsubsection{Linear SVM}
+\subsubsection{Support vector machines}
 
 Support vector machines\cite{Cortes_1995} are discriminative classifiers formally defined by high-dimensional hyperplanes, which are used to distinguish between the classes to which data points belong. The hyperplane defined by an SVM maximizes the margin to the data points used in training, hoping that this leads to a better generalization of the classifier. 
 
@@ -29,6 +29,6 @@ The random forest was used as a model for the character segmentation problem. Th
 The other parameters of the random forest were chosen by cross-validation: the number of trees and the number of features to consider when randomly sampling from the feature space. 
 
 \subsubsection{The support vector machine model}
-The SVM was used for the character recognition problem. A linear kernel was used, so there was no projecting of data into a higher dimensional space. 
+The SVM was used for the character recognition problem. The performance of both linear and radial basis function kernels was evaluated. 
 
-The regularization parameter of the linear SVM was determined using cross-validation. 
+The regularization parameter of the SVM was determined using cross-validation. 
