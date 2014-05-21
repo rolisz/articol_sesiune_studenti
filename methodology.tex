@@ -17,6 +17,12 @@ Support vector machines\cite{Cortes_1995} are discriminative classifiers formall
 
 SVM can be used to project the original data to a much higher dimensional space (in some cases even infinte-dimensional space), so that they are linearly separable in that space. The mapping to a higher dimensional space is done using a kernel function. 
 
+One of the more popular kernels\cite{Chang:2010:TTL:1756006.1859899} that can be used is the radial basis function (RBF) kernel, which is defined as:
+
+$$K(\mathbf{x}, \mathbf{x'}) = \exp\left(-\frac{||\mathbf{x} - \mathbf{x'}||_2^2}{2\sigma^2}\right) $$
+
+The value of the RBF value goes from zero (at infinity) to one (when $ x = x'$), so it can be viewed as a similarity measure. \cite{Vert}
+
 Because sometimes there is noise in the data, so it may not be possible to separate the data linearly, not even in a high dimensional space or, even if possible, this may not be desirable, because it would overfit to the data and not generalize well. In such cases, it is prefered to have a decision surfaces that makes some mistakes on the training data, but generalizes better and represents the noisy data more accurately. SVMs can be used as soft margin classifiers, allowing examples to be classified wrongly at training time, but penalizing them according to their distance to the other side of the hyperplane. \cite{russell1995artificial}
 
 Because SVMs separate only two classes, when there are multiple classes to be distinguished, the "one-vs-all" approach can be used for classficiation, and is as accurate as any other approach for this problem\cite{rifkin2004defense}. In this case, one classifier is trained for each class, to distinguish it from all other classes. To make a prediction, all classifiers predict their value and the one that is used will be the one with the highest confidence score.
