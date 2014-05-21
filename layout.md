@@ -4,5 +4,6 @@ problem_statement.tex
 related.tex
 methodology.tex
 experiments.tex
+figures/bon1/bon1.jpg
 discussion.tex
 conclusion.tex
