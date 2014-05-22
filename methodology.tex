@@ -19,7 +19,7 @@ SVM can be used to project the original data to a much higher dimensional space 
 
 One of the more popular kernels\cite{Chang:2010:TTL:1756006.1859899} that can be used is the radial basis function (RBF) kernel, which is defined as:
 
-$$K(\mathbf{x}, \mathbf{x'}) = \exp\left(-\frac{||\mathbf{x} - \mathbf{x'}||_2^2}{2\sigma^2}\right) $$
+$K(\mathbf{x}, \mathbf{x'}) = \exp\left(-\frac{||\mathbf{x} - \mathbf{x'}||_2^2}{2\sigma^2}\right) $
 
 The value of the RBF value goes from zero (at infinity) to one (when $ x = x'$), so it can be viewed as a similarity measure between the two samples. \cite{Vert}
 
@@ -38,3 +38,14 @@ The other parameters of the random forest were chosen by cross-validation: the n
 The SVM was used for the character recognition problem. The performance of both linear and radial basis function kernels was evaluated. 
 
 The regularization parameter of the SVM was determined using cross-validation. 
+
+\subsection{Document Layout Analysis}
+Before any characters can be recognized in a receipt, the image must first be preprocessed and normalized. This is done in several steps. 
+
+The preprocessing consists of binarizing the images, using Otsu's method\cite{otsu1975threshold}, which adapts the threshold based on the histogram of the image. This step is done to remove any noise and speckles from the image. 
+
+The first step in normalization is to straighten the images. The receipts are assumed to be photographed with a mobile phone camera. Users will most often take photos that are slightly rotated. The orientation of the images is assumed to be vertical, so the software will not try to identify if the receipt is horizontal. To straighten the images, they are rotated from -10 to 10 degrees, with a 0.3 angle step, and a horizontal projection (summing the pixel values row-wise) is done for each resulting image. The straight image is assumed to be the one were are the most variations between the peaks and valleys of the histogram, because in the straight image there would be high peaks because of the lines and low valleys because of the space between lines. 
+
+The following step is removing the edges of the image, to keep only the receipt, removing any background. Due to variations in illumination, we cannot simply look for white patches to identify the receipt, because mobile cameras often use flash which gives receipts a blue tint while photos taken indoor close to a source of light have a yellow hue. The approach that was used was to look at the horizontal and vertical projections and to remove the section from the top and bottom that is over a threshold. 
+
+The last step is detecting the lines in the receipt. Because the images are already straight and without edges, all we have to do is identify the peaks in the horizontal histogram in the image.  
