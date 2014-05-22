@@ -43,6 +43,25 @@ Linear & 10000 & 0.89146 & 0.89762 & 0.89494 & 0.00258 \\ \hline
 
 Table Y contains the average, maximum and minimum values obtained for the F1 measure of the character segmentation problem. The F1 measure is used instead of the accuracy because the two classes are imbalanced: there are 11475 data points which indicate a segmentation point, while there are 19402 points which are not segmentation points, almost twice as many. 
 
+\begin{table}[h]
+\caption{The errors for the character recognition experiment}
+\label{table:seg_values}
+\begin{tabular}{llllll}
+\hline
+Kernel type & Regularization & Min     & Max     & Mean    & Std. dev. \\ \hline
+RBF & 0.01 & 0.09141 & 0.09207 & 0.09165 & 0.00030 \\ 
+Linear & 0.01 & 0.71585 & 0.71768 & 0.71672 & 0.00075 \\ 
+RBF & 1 & 0.59146 & 0.60671 & 0.60130 & 0.00697 \\ 
+Linear & 1 & 0.90372 & 0.90610 & 0.90490 & 0.00097 \\ 
+RBF & 100 & 0.90854 & 0.91159 & 0.91018 & 0.00126 \\ 
+Linear & 100 & 0.89695 & 0.90006 & 0.89860 & 0.00128 \\ 
+RBF & 1000 & 0.90183 & 0.91341 & 0.90795 & 0.00475 \\ 
+Linear & 1000 & 0.89207 & 0.89762 & 0.89453 & 0.00231 \\ 
+RBF & 10000 & 0.90671 & 0.91220 & 0.90957 & 0.00225 \\ 
+Linear & 10000 & 0.89146 & 0.89762 & 0.89494 & 0.00258 \\ \hline
+\end{tabular}
+\end{table}
+
 Table Z contains the confusion matrix for the best experiment on the character recognition problem.
 
 Table W contains the confusion matrix for the best experiment on the character segmentation problem.
