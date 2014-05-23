@@ -19,7 +19,10 @@ SVM can be used to project the original data to a much higher dimensional space 
 
 One of the more popular kernels\cite{Chang:2010:TTL:1756006.1859899} that can be used is the radial basis function (RBF) kernel, which is defined as:
 
-$K(\mathbf{x}, \mathbf{x'}) = \exp\left(-\frac{||\mathbf{x} - \mathbf{x'}||_2^2}{2\sigma^2}\right) $
+\[
+
+    K(\mathbf{x}, \mathbf{x'}) = \exp\left(-\frac{||\mathbf{x} - \mathbf{x'}||_2^2}{2\sigma^2}\right) 
+\]
 
 The value of the RBF value goes from zero (at infinity) to one (when $ x = x'$), so it can be viewed as a similarity measure between the two samples. \cite{Vert}
 
