@@ -4,7 +4,7 @@ problem_statement.tex
 related.tex
 methodology.tex
 experiments.tex
-figures/2014-05-23_18h54_42/2014-05-23_18h54_42.png
+figures/2014-05-23_18h54_42/rec_cm.png
 exp_2.tex
 figures/bon1/bon1.jpg
 figures/121/121.jpg
