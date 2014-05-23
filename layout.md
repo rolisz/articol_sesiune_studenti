@@ -10,4 +10,5 @@ figures/bon1/bon1.jpg
 figures/1/1.jpg
 figures/121/121.jpg
 discussion.tex
+figures/2013-11-07_17h42_04/2013-11-07_17h42_04.png
 conclusion.tex
