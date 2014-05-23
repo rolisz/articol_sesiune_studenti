@@ -1,1 +1,8 @@
 \section{Conclusions and future work}
+We have investigated in this paper two machine learning based models, random forests and SVMs, for developing an OCR engine. We evaluated and analyzed the results that were obtained experimentally. 
+
+One way to improve the accuracy would be to gather more data. Almost all machine learning problem benefit from the addition of extra data\cite{halevy2009unreasonable}.
+
+Another improvement would be to try some other classifiers, such as artificial neural networks, which have been used to obtain the state of the art results on the MNIST digit classification dataset, so it seems reasonable to assume that they would perform well on this problem too. 
+
+For the character segmentation problem, it might help if the problem was presented differently. Now, for each column the classifier has to make a decision if it is a space between letters or not. Other approaches would be to instead predict the length of the current letter or to move to make a more global decision, to determine the best way to segment a line in a way that maximizes an energy function.
