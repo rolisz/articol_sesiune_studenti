@@ -1,6 +1,6 @@
 \section{Literature review}
 \label{sec:lit_rev}
-Optical character recognition has long been of interest in the computer industry. In 1976, Ray Kurzweil presented an omni-font OCR engine, that together with a speech synthesiser would read texts to blind people. It came together with its own special scanner, that was required for taking the images of pages. \cite{schantz1982history}
+Optical character recognition has long been of interest in the computer industry. In 1976, Ray Kurzweil presented in \cite{schantz1982history} an omni-font OCR engine, that together with a speech synthesiser would read texts to blind people. It came together with its own special scanner, that was required for taking the images of pages. 
 
 R. Holley present in a study\cite{Holley_2009} done to evaluate OCR on australian newspapers that the accuracy of various commercial software on newspapers varies from 71\% to 98\%. A similar study done by E. Klijn on dutch newspapers reported accuracies varying between 68\% to 99\%, with this number depending mostly on the quality of the image scan and on the state of the newspaper. 
 
@@ -14,22 +14,22 @@ Initial results on the MNIST database, from the paper published by Y. LeCun and 
 \begin{tabular}{ll}
 \hline
 Classifier                   & Test error rate \\ \hline
-1-layer neural network       & 12.0            \\
-K-nearest-neighbors          & 5.0             \\
-PCA + quadratic classifier   & 3.3             \\
-SVM with Gaussian Kernel     & 1.4             \\
-2-layer neural network       & 4.7             \\
-3-layer neural network       & 2.45            \\
-Convolutional neural network & 0.95            \\ \hline
+1-layer neural network       & 12.0 \%           \\
+K-nearest-neighbors          & 5.0  \%           \\
+PCA + quadratic classifier   & 3.3  \%          \\
+SVM with Gaussian Kernel     & 1.4  \%           \\
+2-layer neural network       & 4.7  \%           \\
+3-layer neural network       & 2.45 \%           \\
+Convolutional neural network & 0.95 \%           \\ \hline
 \end{tabular}
 \end{table}
 
-Many improvements have been published on the MNIST dataset. Some of the more recent ones include L. Deng and D. Yu\cite{deng2011deep}, obtaining an error rate of 0.83, using a deep convex neural net with unsupervised pre-training. The best result obtained without using committees is D. Ciresan's deep neural network, trained on GPU devices\cite{Cire_an_2010}, that obtained 0.35\% error rate. The current state of the art was obtained by the same group, using a committee of 35 convolutional neural networks, with an error rate of 0.23\%, which beats human performance\cite{2012arXiv1202.2745C}. 
+Many improvements have been published on the MNIST dataset. Some of the more recent ones include L. Deng and D. Yu\cite{deng2011deep}, obtaining an error rate of 0.83\%, using a deep convex neural net with unsupervised pre-training. The best result obtained without using committees is D. Ciresan's deep neural network, trained on GPU devices\cite{Cire_an_2010}, that obtained 0.35\% error rate. The current state of the art was obtained by the same group, using a committee of 35 convolutional neural networks, with an error rate of 0.23\%, which beats human performance\cite{2012arXiv1202.2745C}. 
 
 For the character segmentation problem, one approach proposed by S. Lee and D. Lee\cite{Dong_June_Lee} was based on vertical projections of the images. The projections were obtained by counting how many black pixels were in a column and then various criteria were used to determine which columns were candidates for segmentation, based on some threshold values. They obtained results ranging from 85\% to 98\% accuracy, depending on font and alphabet that was used. 
 
 F. Kahraman and B. Kurt used a nonlinear vector quantization to perform the character segmentation\cite{kahraman2003license} with an accuracy of 94.5\% on a set of 2198 license plate characters. 
 
-F. Vojtěch and H. Václav presented an approach using Hidden Markov Chains to model the problem of character segmentation in license plates. Without incorporating prior knowledge about the license plate, they get 37\% incorrect segmentations, but by using that knowledge, they managed to get it down to 3.3\%\cite{Franc_2005}.
+F. Vojtěch and H. Václav presented in \cite{Franc_2005} an approach using Hidden Markov Chains to model the problem of character segmentation in license plates. Without incorporating prior knowledge about the license plate, they get 37\% incorrect segmentations, but by using that knowledge, they managed to get it down to 3.3\%.
 
 B. Janssen and E. Saund have worked on a system called Receipts2Go\cite{janssen2012receipts2go} for extracting information from small documents, including receipts. They presented two improvements to the image normalization process, but for the actual OCR part they used off-the-shelf commercial software. 
