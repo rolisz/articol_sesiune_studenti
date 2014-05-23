@@ -24,17 +24,17 @@ If we look at the confusion matrix for the character recognition problem, comput
 \item confusing 1 with I - 4 times
 \end{itemize} 
 
-These mistakes are easy to make: a comma and a period are very similar, especially in a noisy, low resolution environment. The lower and upper case letters O are again very similar to the digit 0, on some receipts there being no distinction between O and 0, only the context in which they are used. For monospace fonts, which some receipts use, the lack of difference between l, I, 1 is a well known problem, which is why many design books recommend using other fonts. 
+These mistakes are easy to make: a comma and a period are very similar, especially in a noisy, low resolution environment. The lower and upper case letters O are again very similar to the digit 0, on some receipts there being no distinction between O and 0, only the context in which they are used. For monospace fonts, which some receipts use, the lack of difference between l, I, 1 is a well known problem, which is why many design books and human computer interaction studies recommend using other fonts\cite{chaparro2006examining}. 
 
 If we look at the confusion matrix for the character segmentation problem, we see that it makes the mistake of not predicting a split more often than it does the opposite, so the model is more specific, rather then sensitive. 
 
 Specifity and sensitivity are defined as\cite{Fawcett_2006}
 
 \[
-    \text{sensitivity} = \frac{\text{positives correctly classified}}{\text{total positives}} = \frac{2546}{2546+363} = 87.52 \%
+    \text{sensitivity} = \frac{\text{true positives}}{\text{all positives}} = \frac{2546}{2546+363} = 87.52 \%
 \]
 \[
-    \text{specificity} = \frac{\text{true negatives}}{\text{true negatives + false positives}} = \frac{4556}{4556+255} =  94.70 \%
+    \text{specificity} = \frac{\text{true negatives}}{\text{all negatives}} = \frac{4556}{4556+255} =  94.70 \%
 \]
 
 \subsection{Comparison to related work}
