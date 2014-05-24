@@ -2,7 +2,7 @@
 \label{sec:method}
 This section presents the background of the machine learning approaches we are using for the problem of OCR and then the specifics of the models applied to this problem are discussed. 
 
-\subsection{Theoretical background}
+\subsection{Theoretical Background}
 
 \subsubsection{Random forests}
 
@@ -12,7 +12,7 @@ When training the random forest, for each tree, n samples are taken with replace
 
 Random forests are a popular algorithm in many machine learning competitions, because they are fast, they don't have many parameters to tune, yet still produce good predictions. Among their weaknesess is the fact that they can easily overfit a noisy dataset. 
 
-\subsubsection{Support vector machines}
+\subsubsection{Support Vector Machines}
 
 Support vector machines\cite{Cortes_1995} are discriminative classifiers formally defined by high-dimensional hyperplanes, which are used to distinguish between the classes to which data points belong. The hyperplane defined by an SVM maximizes the margin to the data points used in training, hoping that this leads to a better generalization of the classifier. 
 
@@ -30,14 +30,14 @@ Because sometimes there is noise in the data, so it may not be possible to separ
 
 Because SVMs separate only two classes, when there are multiple classes to be distinguished, the ``one-vs-all`` approach can be used for classification, and is as accurate as any other approach for this problem\cite{rifkin2004defense}. In this case, one classifier is trained for each class, to distinguish it from all other classes. To make a prediction, all classifiers predict their value and the one that is used will be the one with the highest confidence score.
 
-\subsection{Model design}
+\subsection{Model Design}
 
-\subsubsection{The random forest model}
+\subsubsection{The Random Forest Model}
 The random forest was used as a model for the character segmentation problem. The criterion for choosing the best feature to split a node is the information gain (entropy). Trees are grown to their full depth, no pruning or limitation is applied to the branches. 
 
 The other parameters of the random forest were chosen by cross-validation: the number of trees and the number of features to consider when randomly sampling from the feature space. 
 
-\subsubsection{The support vector machine model}
+\subsubsection{The Support Vector Machine Model}
 The SVM was used for the character recognition problem. The performance of both linear and radial basis function kernels was evaluated. 
 
 The regularization parameter of the SVM was determined using cross-validation. 
