@@ -17,7 +17,7 @@ For the character segmentation problem, the labels were binary: 1 if a certain d
 The data set was shuffled and then split into two parts, one for training and one for testing. The splitting was done in a random way, because the data points are independent and order does not matter. The training set contained 80\% of the data and the test set contained the remaining 20\%. 
 
 All experiments were run multiple types, with the dataset being shuffled each time. In the case of the Random Forests, the multiple runs of the experiments are necessary because the splitting points for the trees and the dataset splits are chosen randomly across runs. 
-\subsection{Experiments}
+\subsection{Results}
 
 For both tasks, the parameters for the algorithms were selected using cross-validation. In the case of the SVM, the search space was on logarithmic scale from $10^{-2}$ to $10^4$ for the regularization parameter. In the case of the random forest, the number of trees used ranged from 150 to 250, in steps of 50, and the number of features to be sampled at each point varied from using the square root, the base 2 logarithm, 10\% or 30\% of the total number of features. 
 
