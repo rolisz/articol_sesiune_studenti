@@ -4,9 +4,7 @@
 This section analyzes our approaches and compares them to similar existing work.
 
 \subsection{Analysis of the Proposed Approach}
-For the character recognition problem, using a RBF kernel SVM resulted in a $ 91.018\% \pm 0.126 $ error rate in the best case, using a value of 100 for the regularization rate, while using a linear kernel yielded $ 90.490\% \pm 0.097 $ as its best result, for the value of 1 for the regularization rate. Using a RBF kernel gives a slightly better results.
-
-One explanation for this would be that the data is already high dimensional (400 dimensions) and the data points lie in sufficiently different parts so that the separating hyperplanes work effectively, without needing a projection into the infinite dimensional space offered by the RBF kernel. 
+As shown in section \ref{sec:recog}, using an SVM with a RBF kernel seems to lead to slightly better results. One explanation for this would be that the data is already high dimensional (400 dimensions) and the data points lie in sufficiently different parts so that the separating hyperplanes work effectively, without needing a projection into the infinite dimensional space offered by the RBF kernel. 
 
 In the case of the character segmentation, the values of the parameter didn't matter that much. The difference between the best and the worst result was about 0.2. The number of features had the most influence, of $ 0.1\% $, on the F1 score, while the number of trees influenced it only by 0.01. The highest average was obtained for the values of 250 trees in the forest and 40 features chosen at each split, giving an F1 score of $ 87.936\% \pm 0.445$ on the validation set and a score of $ 91.99\% $ on the test set.  
 
