@@ -9,6 +9,7 @@ experiments.tex
 figures/2014-05-23_18h54_42/rec_cm.png
 exp_2.tex
 discussion.tex
+discussion_2.tex
 figures/2013-11-07_17h42_04/2013-11-07_17h42_04.png
 figures/2013-11-07_17h52_30/2013-11-07_17h52_30.png
 conclusion.tex
