@@ -3,10 +3,10 @@ introduction.tex
 problem_statement.tex
 related.tex
 methodology.tex
+figures/bon1/bon1.jpg
 experiments.tex
 figures/2014-05-23_18h54_42/rec_cm.png
 exp_2.tex
-figures/bon1/bon1.jpg
 figures/121/121.jpg
 discussion.tex
 figures/2013-11-07_17h42_04/2013-11-07_17h42_04.png
