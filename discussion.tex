@@ -27,7 +27,7 @@ These mistakes are easy to make: a comma and a period are very similar, especial
 
 If we look at the confusion matrix for the character segmentation problem, we see that it makes the mistake of not predicting a split more often than it does the opposite, so the model is more specific, rather then sensitive. 
 
-Specifity and sensitivity are defined as\cite{Fawcett_2006}
+Specifity and sensitivity can be computed as\cite{Fawcett_2006}
 
 \[
     \text{sensitivity} = \frac{\text{true positives}}{\text{all positives}} = \frac{2546}{2546+363} = 87.52 \%
@@ -41,7 +41,7 @@ If we compare the results of the character recognition problem with the ones obt
 
 The results obtained in \cite{kahraman2003license} and \cite{Franc_2005} for the character segmentation problem are a bit better than our results: 94.5\% and 96.7\% accuracy, compared to our 91.9\%. The difference between the two problems is that in their papers the number of characters in a licence plate is known and fixed, while lines in a receipt have varying lenghts. This prior knowledge used by them can explain the difference in results. 
 
-The paper by Janssen\cite{janssen2012receipts2go} deals with OCR on receipts, but they don't train the OCR engine for receipts, they just present a new approach for image normalization.
+The paper by Janssen\cite{janssen2012receipts2go} deals with OCR on receipts, but they don't train the OCR engine for receipts, they just present a new approach for image normalization. In contrast, our approach improves the accuracy of the OCR engine by focusing on the character segmentation and recognition problem. 
 
 \subsection{Application for the OCR Engine}
 The main reason for developing this OCR engine was to use it an application, called ReceiptBudget, which would enable users to take a photo of a receipt, the program would then extract the relevant information (date, items, store, total) from the photo, store it in a database, and then user could view an interactive dashboard of his expenses.
