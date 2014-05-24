@@ -1,8 +1,8 @@
-\section{Experimental evaluation}
+\section{Experimental Evaluation}
 \label{sec:exp}
 In this section we describe the experiments that we have done, starting with the data gathering process, the training of the models and the results of their evaluation.
 
-\subsection{Data set and processing}
+\subsection{Data Set and Processing}
 The data set was obtained from 20 receipts that were manually annotated with the position of each character in them. In total there are 7045 characters. There are 74 different characters, including digits, uppercase and lowercase letters and punctuation. 
 
 The bounding boxes of the characters were extracted from the images. The resulting patches were normalized to have a size of 30x30 pixels and were converted to grayscale. The small images that resulted after this processing were used as the data set for the character recognition problem.
@@ -13,7 +13,7 @@ For the character recognition problem, the labels corresponding to each characte
 
 For the character segmentation problem, the labels were binary: 1 if a certain data point was were a segmentation should occur, 0 otherwise. 
 
-\subsection{Training and testing}
+\subsection{Training and Testing}
 The data set was shuffled and then split into two parts, one for training and one for testing. The splitting was done in a random way, because the data points are independent and order does not matter. The training set contained 80\% of the data and the test set contained the remaining 20\%. 
 
 All experiments were run multiple types, with the dataset being shuffled each time. In the case of the Random Forests, the multiple runs of the experiments are necessary because the splitting points for the trees and the dataset splits are chosen randomly across runs. 
